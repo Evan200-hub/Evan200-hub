@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+.menu-icon{
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.logo a {
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+#toggle-menu {
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  width: 300px;
+  left: -300px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 10 0 6px rgba(255, 255, 255, 0.5);
+  transition: left 0.3s;
+}
+
+#toggle-menu:checked ~ .sidebar {
+  left: 0;
+}
+
+.menu-list {
+  list-style: none;
+  padding-top: 20px;
+}
+
+.menu-list li {
+  margin-top: 6px;
+  padding: 12px 12px;
+}
+
+.menu-list li a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.menu-list li a i {
+  margin-right: 15px;
+}
+
+.menu-list li:hover {
+  border-left: 1px solid rgb(123, 120, 120);
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.social-icons {
+  position: absolute;
+  left: 20%;
+  bottom: 120px;
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+}
+
+.social-icons a i {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.social-icons a:hover i {
+  opacity: 1;
+}
